@@ -64,8 +64,8 @@ function! s:InitPatch()
   endif
 endfunction
 
-autocmd FileType c,cpp,objc,objcpp call <SID>InitPatch()
-autocmd FileType c.*,cpp.*,objc.*,objcpp.* call <SID>InitPatch()
+autocmd FileType c,cpp,objc,objcpp,c.*,cpp.*,objc.*objcpp.*
+    \ call <SID>InitPatch()
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
